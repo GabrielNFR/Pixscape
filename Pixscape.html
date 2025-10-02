@@ -6,10 +6,10 @@
 
 <meta charset="UTF-8">
 
-<title>Pixescape</title>
+<title>Pixscape</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
-Pixescape
+Pixscape
 
 # BITSY VERSION 8.14
 
@@ -48,11 +48,55 @@ b,g,0,0,0,0,0,0,0,0,0,0,0,c,d,b
 b,g,0,0,0,0,0,0,0,0,0,0,c,c,d,b
 b,g,0,0,0,0,0,0,0,0,0,c,c,c,d,b
 b,j,f,f,f,f,k,k,f,f,f,f,f,f,i,b
-b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
-NAME example room
+b,b,b,b,b,b,0,0,b,b,b,b,b,b,b,b
+NAME Centro de comando
 ITM 0 11,6
+EXT 10,13 1 5,3
+EXT 7,15 2 8,0
 PAL 0
 TUNE 2
+
+ROOM 1
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+b,b,b,a,e,e,e,e,e,e,e,e,h,b,b,b
+b,b,b,g,l,0,0,0,0,0,0,0,d,b,b,b
+b,b,b,g,0,0,0,0,0,0,0,0,d,b,b,b
+b,b,b,g,0,0,0,0,0,0,0,0,d,b,b,b
+b,b,b,g,0,0,0,0,0,0,0,0,d,b,b,b
+b,b,b,g,n,m,o,0,0,0,0,0,d,b,b,b
+b,b,b,g,0,0,0,0,0,0,0,0,d,b,b,b
+b,b,b,g,0,0,0,0,0,0,0,0,d,b,b,b
+b,b,b,j,f,f,f,f,f,f,f,f,i,b,b,b
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Power grid
+EXT 5,3 0 10,13
+PAL 0
+
+ROOM 2
+b,b,b,b,b,b,b,0,0,b,b,b,b,b,b,b
+b,a,e,e,e,e,e,0,0,e,e,e,e,e,h,b
+b,g,0,0,0,0,0,0,0,0,0,0,0,0,d,b
+b,g,0,0,0,0,0,0,0,0,0,0,0,0,d,b
+b,g,0,0,0,0,0,0,0,0,0,0,0,0,d,b
+b,g,0,0,0,0,0,c,c,0,0,0,0,0,d,b
+b,g,0,0,0,0,c,c,c,c,0,0,0,0,d,b
+b,g,0,0,0,p,c,c,c,c,q,0,0,0,d,b
+b,g,0,0,0,0,c,c,c,c,0,0,0,0,d,b
+b,g,0,0,0,0,0,c,c,0,0,0,0,0,d,b
+b,g,0,0,0,0,0,0,0,0,0,0,0,0,d,b
+b,g,0,0,0,0,0,0,0,0,0,0,0,0,d,b
+b,g,0,0,0,0,0,0,0,0,0,0,0,0,d,b
+b,g,0,0,0,0,0,0,0,0,0,0,0,0,d,b
+b,j,f,f,f,f,f,f,f,f,f,f,f,f,i,b
+b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+NAME Sala de operações
+EXT 8,0 0 7,15
+PAL 0
 
 TIL a
 00000000
@@ -182,7 +226,71 @@ TIL k
 01111110
 01000010
 01111110
+WAL false
+
+TIL l
+11111111
+11111111
+11001001
+11001001
+11001001
+11001001
+11111111
+11111111
 WAL true
+
+TIL m
+00000000
+11111111
+11111111
+00000000
+00000000
+00000000
+00000000
+00000000
+WAL true
+
+TIL n
+00000000
+01111111
+01111111
+01000000
+01000000
+01000000
+01000000
+01000000
+WAL true
+
+TIL o
+00000000
+11111110
+11111110
+00000010
+00000010
+00000010
+00000010
+00000010
+WAL true
+
+TIL p
+01000000
+01000000
+01000000
+01000000
+01111100
+01000100
+01000100
+01000100
+
+TIL q
+00000100
+00000100
+00000100
+00000100
+01111100
+01000100
+01000100
+01000100
 
 SPR A
 00111100
@@ -215,7 +323,6 @@ SPR a
 00100100
 NAME cat
 DLG 0
-POS 0 8,12
 BLIP 1
 
 SPR b
@@ -227,8 +334,31 @@ SPR b
 00011000
 00111100
 00111100
+NAME pc
 DLG 3
 POS 0 7,2
+
+SPR c
+00111010
+00011010
+00011010
+00111010
+00011010
+00111010
+00111010
+00111010
+DLG 4
+POS 1 12,6
+
+SPR d
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
 
 ITM 0
 00000000
@@ -256,7 +386,14 @@ DLG 2
 BLIP 2
 
 DLG 0
-I'm a cat
+"""
+I'm a cat{pg}{
+  - {item "0"} == 1 ?
+    tea party
+  - else ?
+    ...
+}
+"""
 NAME cat dialog
 
 DLG 1
@@ -268,8 +405,12 @@ A key! {wvy}What does it open?{wvy}
 NAME key dialog
 
 DLG 3
-SISTEMA OFFLINE - ENERGIA INSUFICIENTE. ATIVAR SISTEMAS AUXILIEARES
+{shk}SISTEMA OFFLINE - ENERGIA INSUFICIENTE{/shk}{pg}{shk} ATIVAR SISTEMAS AUXILIARES{/shk}
 NAME sprite b dialog
+
+DLG 4
+A estação de energia esta comprometida {pg} procure a ferramenta adequada
+NAME sprite c dialog
 
 VAR a
 42
@@ -13325,6 +13466,7 @@ CHAR 65533
 110110
 011100
 </script>
+</script>
 
 <style>
 html {
@@ -25070,6 +25212,7 @@ CHAR 9835
 011011
 011000
 000000
+</script>
 </script>
 </script>
 </script>
