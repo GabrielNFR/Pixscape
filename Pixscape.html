@@ -525,6 +525,7 @@ TIL u
 01111111
 01111111
 01111111
+WAL true
 
 TIL v
 00000000
@@ -894,9 +895,9 @@ DLG f
 """
 {
   - {item "4"} == 1 ?
-    COORDENADAS ENCONTRADA
+    COORDENADAS ENCONTRADAS
   - else ?
-    Coordenas encontrada e adicionada ao inventario
+    Terminal de Coordenadas encontrado e adicionado ao inventário
 }
 """
 NAME coordenadas dialog
@@ -904,12 +905,13 @@ NAME coordenadas dialog
 DLG g
 """
 {sequence
-  - {shk}MALDITO ERICK ROUBOU MINHAS ENGRANAGENS DE NOVO{/shk}{pg}{shk}AQUI, USE ESSE PEDAÇO DE PEIXE PARA TROCA-LO PELAS MINHAS PEÇAS ANTES QUE SEJA TARDE DEMAIS{/shk}{peixe = 1}
-  - {shk}AGUARDANDO RESPOSTA{/shk}{
+  - {
       - engrenagens == 1 ?
-        SISTEMAS RELIGANDO BEEP BOOP{pg}OBRIGADO HUMANO, COMO RETRIBUIÇÃO SAIBA QUE PARA SAIR DAQUI VOÇÊ PRECISA RELIGAR O SISTEMA DE NAVEGAÇÃO USANDO O CIRCUITO DE ENERGIA{pg}NÃO SE ESQUEÇA DAS COORDENADAS
+        SISTEMA OPERACIONAL{pg}OBRIGADO HUMANO, COMO RETRIBUIÇÃO SAIBA QUE PARA SAIR DAQUI VOÇÊ PRECISA RELIGAR O SISTEMA DE NAVEGAÇÃO USANDO A CÉLULA DE ENERGIA{pg}NÃO SE ESQUEÇA DO TERMINAL DE COORDENADAS NO CAMINHO
+      - peixe == 0 ?
+        {shk}MALDITO ERICK ROUBOU MINHAS ENGRANAGENS DE NOVO{/shk}{pg}{shk}AQUI, USE ESSE PEDAÇO DE PEIXE PARA TROCA-LO PELAS MINHAS PEÇAS ANTES QUE SEJA TARDE DEMAIS{/shk}{peixe = 1}
       - else ?
-        BEEEZ
+        {shk}AGUARDANDO RESPOSTA{/shk}{pg}BEEEZ
     }
 }
 """
@@ -917,11 +919,11 @@ NAME sprite i dialog
 
 DLG h
 """
-MEOW disse erick{pg}{
+Erick: "MEOW"{pg}{
   - peixe == 1 ?
-    MEOW: erick solta engrenagens pela boca{engrenagens = 1}
+    Erick solta as engrenagens em troca pelo peixe{engrenagens = 1}
   - else ?
-    MEOW: Erick não esta interessado no que você tem a oferecer
+    Erick não esta interessado no que você tem a oferecer, talvez alguém pode te ajudar?
 }
 """
 NAME sprite a dialog
@@ -14004,6 +14006,7 @@ CHAR 65533
 110110
 011100
 </script>
+</script>
 
 <style>
 html {
@@ -25749,6 +25752,7 @@ CHAR 9835
 011011
 011000
 000000
+</script>
 </script>
 
 </head>
